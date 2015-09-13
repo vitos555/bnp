@@ -1,1 +1,139 @@
 // Normally mainpage styles
+.content
+	padding-bottom: 150px 
+	padding-top: 20px 
+	@extend %in
+.items
+	+clr
+	.item
+		float: left
+		width: 24%
+		margin-right: 1.33%  
+		&:last-child
+			margin-right: 0 
+	&.items_3
+		.item
+			width: 31%
+			margin-right: 3.5% 
+			&:last-child
+				margin-right: 0 
+	&.items_2
+		.item
+			width: 48%
+			margin-right: 4% 
+			&:last-child
+				margin-right: 0 
+.item
+	border: 1px solid #9C9C9C 
+	box-shadow: 0 0 10px rgba(#000,.4)
+	background: #fff 
+	position: relative
+	padding-bottom: 57px 
+	.item__picture
+		height: 270px 
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		background-position: 50% 50% 
+		background-repeat: no-repeat
+	.item__text
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: #fff   
+		height: 57px  
+		font-size: 15px 
+		color: #535353 
+		padding: 6px 13px 0 13px 
+	&.item_finished
+		.item__buy
+			position: absolute
+			bottom: 5px
+			left: 0
+			right: 0
+			text-align: center 
+			display: none
+		&:hover
+			.item__text
+				display: none
+			.item__buy
+				display: block
+				padding: 0 5px 
+				button
+					font-size: 25px 
+					border-radius: 6px
+					display: block
+					height: 42px 
+					line-height: 42px 
+					font-size: 25px 
+					font-weight: 700
+					text-decoration: none
+					color: #fff  
+					font-family: Comfortaa,sans-serif 
+					text-align: center
+					width: 100% 
+					+g(#26E7DE,#21CFC7)
+	&.item_addtext
+		height: 57px + 270px
+		position: relative
+		textarea
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			padding: 15px 
+			border: none  
+			font-size: 25px     
+			color: #858585 
+			font-family: Comfortaa,sans-serif 
+			box-sizing: border-box 
+	&.item_add
+		height: 57px + 270px - 2px
+		box-shadow: none
+		box-sizing: border-box 
+		border: 2px dashed #B7B7B7
+		background: transparent 
+		.item__addicon
+			border-radius: 50%
+			font-size: 30px 
+			color: #A4A4A4 
+			text-align: center
+			width: 132px 
+			height: 132px 
+			border: 3px dashed #B7B7B7
+			position: absolute
+			top: 50%
+			left: 50%  
+			margin-left: -66px 
+			margin-top: -66px 
+			line-height: 1.1
+			box-sizing: border-box
+			padding-top: 30px  
+			cursor: pointer
+.pick
+	margin-bottom: 20px 
+	position: relative
+	.pick__title
+		text-align: center
+		font-size: 25px 
+		font-weight: normal
+		color: #767676 
+		margin-bottom: 13px
+	.pick__socials 
+		position: absolute
+		right: 0
+		top: 0
+		+s(share)  
+	.pick__fave
+		position: absolute
+		left: 0
+		top: 3px
+		+s(heart)  
+		cursor: pointer
+		&:hover
+			+s(heart_hover) 
+		&.is-active
+			+s(heart_active) 
