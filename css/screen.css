@@ -34,23 +34,30 @@ body { font-family: Comfortaa, Arial, sans-serif; font-size: 12px; line-height: 
 body { padding-top: 90px; padding-bottom: 150px; }
 
 .header { background: #BFBFBF; }
-.header .header__in { position: relative; height: 90px; }
+.header .header__in { position: relative; height: 90px; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .is-small .header .header__in { height: 50px; }
-.header .header__logo { position: absolute; top: 23px; left: 0; }
+.header .header__logo { position: absolute; top: 23px; left: 0; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .is-small .header .header__logo { top: 5px; width: 60%; }
-.header .header__user { position: absolute; top: 17px; right: 0; }
-.header .header__user .header__av { width: 55px; height: 55px; border-radius: 50%; display: inline-block; }
-.header .header__search { position: absolute; top: 22px; right: 100px; width: 320px; background: #FFFFFF; height: 47px; }
-.header .header__searchinput { height: 47px; line-height: normal; font-size: 22px; font-family: Comfortaa, sans-serif; width: 222px; padding-left: 20px; }
+.header .header__user { position: absolute; top: 17px; right: 0; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-small .header .header__user { top: 10px; }
+.header .header__user .header__av { width: 55px; height: 55px; border-radius: 50%; display: inline-block; background-position: 50% 50%; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-small .header .header__user .header__av { width: 30px; height: 30px; }
+.header .header__search { position: absolute; top: 22px; right: 100px; width: 320px; background: #FFFFFF; height: 47px; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-small .header .header__search { top: 4px; height: 40px; }
+.header .header__searchinput { height: 47px; line-height: normal; font-size: 22px; font-family: Comfortaa, sans-serif; width: 222px; padding-left: 20px; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-small .header .header__searchinput { height: 40px; }
 .header .header__searchinput:-ms-input-placeholder { color: #C5C5C5; }
 .header .header__searchinput:-moz-placeholder { color: #C5C5C5; }
 .header .header__searchinput::-moz-placeholder { color: #C5C5C5; }
 .header .header__searchinput::-webkit-input-placeholder { color: #C5C5C5; }
 .header .header__searchinput::placeholder { color: #C5C5C5; }
-.header .header__adv { position: absolute; right: 0; top: 0; width: 47px; height: 47px; border-left: 1px solid #BFBFBF; background: #F7F7F7; cursor: pointer; }
+.header .header__adv { position: absolute; right: 0; top: 0; width: 47px; height: 47px; border-left: 1px solid #BFBFBF; background: #F7F7F7; cursor: pointer; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-small .header .header__adv { height: 40px; }
 .header .header__adv:before { content: ""; background: url('../img/icons-s36cf723eec.png') 0 0 no-repeat; width: 25px; height: 23px; position: absolute; top: 11px; left: 11px; }
+.is-small .header .header__adv:before { top: 9px; }
 .header .header__searchsubmit { background: url('../img/icons-s36cf723eec.png') 0 -477px no-repeat; width: 39px; height: 33px; right: 55px; top: 5px; position: absolute; cursor: pointer; }
-.header .header__addnew { position: absolute; top: 26px; left: 50%; width: 127px; margin-left: -68px; text-align: center; height: 40px; line-height: 34px; border: 3px solid #999; font-size: 24px; color: #999999; text-decoration: none; border-radius: 37px; }
+.is-small .header .header__searchsubmit { top: 3px; }
+.header .header__addnew { position: absolute; top: 26px; left: 50%; width: 127px; margin-left: -68px; text-align: center; height: 40px; line-height: 34px; border: 3px solid #999; font-size: 24px; color: #999999; text-decoration: none; border-radius: 37px; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .is-small .header .header__addnew { top: 5px; }
 
 .create { background: #f7f7f7; }
