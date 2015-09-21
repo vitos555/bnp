@@ -23,6 +23,13 @@
 			margin-right: 4% 
 			&:last-child
 				margin-right: 0 
+			.item__picture
+				height: 350px 
+			
+	&.items_4
+		.item
+			.item__picture
+				height: 210px 
 .item
 	border: 1px solid #9C9C9C 
 	box-shadow: 0 0 10px rgba(#000,.4)
@@ -36,6 +43,34 @@
 		background-size: contain 
 		background-position: 50% 50% 
 		background-repeat: no-repeat
+		position: relative
+	.item__check
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0   
+		top: 0
+		z-index: -1
+		background: url(../img/check.png) no-repeat 50% 55%
+		transition: all .3s linear
+		opacity: 0
+		-webkit-background-size:  210% auto
+		-o-background-size: 210% 2auto
+		background-size:   210% auto
+	&.is-check
+		.item__check
+			opacity: .5
+			z-index: 10
+	&.is-voted
+		.item__check
+			height: 100% 
+	&.is-winner
+		&:before
+			position: absolute
+			right: 10px 
+			top: 10px 
+			content: ' '
+			+s(choicemade)
 	.item__text
 		position: absolute
 		bottom: 0
@@ -46,6 +81,7 @@
 		font-size: 15px 
 		color: #535353 
 		padding: 6px 13px 0 13px 
+		overflow: hidden
 	&.item_finished
 		.item__buy
 			position: absolute
@@ -75,7 +111,7 @@
 					width: 100% 
 					+g(#26E7DE,#21CFC7)
 	&.item_addtext
-		height: 57px + 270px
+		height: 57px + 212px
 		position: relative
 		textarea
 			position: absolute
@@ -91,7 +127,7 @@
 			font-family: Comfortaa,sans-serif 
 			box-sizing: border-box 
 	&.item_add
-		height: 57px + 270px - 2px
+		height: 57px + 212px
 		box-shadow: none
 		box-sizing: border-box 
 		border: 2px dashed #B7B7B7

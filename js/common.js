@@ -7,4 +7,15 @@ head.ready(function() {
 	$('.js-toggleheader').click(function(event) {
 		$('.create').slideToggle();
 	});
+	$('.item').click(function(event) {
+		$(this).addClass('is-voted');
+	});
+
+	$(window).scroll(function () {
+	    if( $(window).scrollTop() > 20){
+	      $('.top').addClass('is-small');
+	    } else {
+	      $('.top').removeClass('is-small');
+	    }
+	});
 });
