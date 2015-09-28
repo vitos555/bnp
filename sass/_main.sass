@@ -30,12 +30,13 @@
 		.item
 			.item__picture
 				height: 210px 
-.item
+.item__in
 	border: 1px solid #9C9C9C 
 	box-shadow: 0 0 10px rgba(#000,.4)
 	background: #fff 
 	position: relative
 	padding-bottom: 57px 
+	margin-bottom: 20px 
 	.item__picture
 		height: 270px 
 		-webkit-background-size: contain 
@@ -173,3 +174,80 @@
 			+s(heart_hover) 
 		&.is-active
 			+s(heart_active) 
+
+.votes
+	width: 240px 
+	margin: 0 auto 
+	margin-bottom: 18px 	
+.vote
+	display: inline-block 
+	margin-right: 10px
+	font-size: 32.5px
+	color: #999 
+	&:last-child
+		margin-right: 0 
+	&_total
+		position: relative
+		padding-right: 40px
+		&:after
+			content: "" 
+			position: absolute
+			top: 9px
+			left: 47px
+			width: 32px
+			height: 25px 
+			+s(totalvotes)
+	&_men
+		position: relative
+		padding-right: 30px 
+		&:after
+			content: "" 
+			position: absolute
+			top: 8px
+			left: 37px
+			width: 32px
+			height: 25px 
+			+s(menvotes)	
+	&_women
+		position: relative	
+		padding-right: 30px 		
+		&:after
+			content: "" 
+			position: absolute
+			top: 8px
+			left: 37px
+			width: 32px
+			height: 25px 
+			+s(womenvotes)		
+.comments
+	position: relative
+	width: 100% 
+	border: 1px solid #9C9C9C
+	box-shadow: 0 0 10px rgba(#000,.4)
+	background: #FFF 
+	font-size: 0 
+.comment
+	+clr
+	padding-top: 12px
+	padding-left: 15px  
+	padding-right: 35px 
+	padding-bottom: 25px 
+	img
+		float: left 
+		width: 32px
+		height: 32px
+		margin-right: 11px  
+		-webkit-border-radius: 50% 
+		border-radius: 50% 
+	&__text
+		margin-left: 49px 
+		font-size: 15px
+		line-height: 17px 
+		color: #232323  
+	&__user
+		margin-left: 49px 
+		margin-bottom: 9px 
+		font-size: 17px
+		font-weight: 700 
+		line-height: 17px 
+		color: #232323  
