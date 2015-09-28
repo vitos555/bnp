@@ -3,83 +3,83 @@
 	top: 0
 	left: 0
 	right: 0
-	z-index: 1000 
+	z-index: 1000
 body
-	padding-top: 90px 
-	padding-bottom: 150px  
+	padding-top: 90px
+	padding-bottom: 150px
 .header
-	background: #BFBFBF 
+	background: #BFBFBF
 	.header__in
 		@extend %in
 		position: relative
-		height: 90px 
+		height: 90px
 		+transition(all .2s linear)
 		.is-small &
-			height: 50px 
+			height: 50px
 	.header__logo
 		position: absolute
-		top: 23px 
-		left: 0 
+		top: 23px
+		left: 0
 		+transition(all .2s linear)
 		.is-small &
-			top: 8px 
-			width: 60% 
+			top: 8px
+			width: 60%
 		img
 			.is-small &
-				width: 200px 
+				width: 200px
 
 	.header__user
 		position: absolute
-		top: 17px 
-		right: 0 
+		top: 17px
+		right: 0
 		+transition(all .2s linear)
 		.is-small &
-			top: 10px 
+			top: 10px
 		.header__av
-			width: 55px 
-			height: 55px 
+			width: 55px
+			height: 55px
 			border-radius: 50%
 			display: inline-block
-			background-position: 50% 50% 
+			background-position: 50% 50%
 			+transition(all .2s linear)
 			.is-small &
-				width: 30px 
-				height: 30px 
+				width: 30px
+				height: 30px
 	.header__search
 		position: absolute
-		top: 22px 
-		right: 100px 
-		width: 320px 
-		background: #FFFFFF 
-		height: 47px 
+		top: 22px
+		right: 100px
+		width: 320px
+		background: #FFFFFF
+		height: 47px
 		+transition(all .2s linear)
 		.is-small &
-			top: 4px 
-			height: 40px 
+			top: 4px
+			height: 40px
 	.header__searchinput
-		height: 47px 
-		line-height: normal 
-		font-size: 22px 
-		font-family: Comfortaa,sans-serif 
-		width: 222px 
-		padding-left: 20px 
+		height: 47px
+		line-height: normal
+		font-size: 22px
+		font-family: Comfortaa,sans-serif
+		width: 222px
+		padding-left: 20px
 		+transition(all .2s linear)
 		.is-small &
-			height: 40px 
+			height: 40px
 		+placeholder
-			color: #C5C5C5 
+			color: #C5C5C5
 	.header__adv
 		position: absolute
 		right: 0
 		top: 0
-		width: 47px   
+		width: 47px
 		height: 47px
-		border-left: 1px solid #BFBFBF 
-		background: #F7F7F7 
+		border-left: 1px solid #BFBFBF
+		background: #F7F7F7
 		cursor: pointer
 		+transition(all .2s linear)
 		.is-small &
-			height: 40px 
+			height: 40px
 		&:before
 			content: ''
 			+s(adv)
@@ -87,85 +87,85 @@ body
 			top: 11px
 			left: 11px
 			.is-small &
-				top: 9px 
+				top: 9px
 	.header__searchsubmit
 		+s(search)
-		right: 55px 
-		top: 5px 
+		right: 55px
+		top: 5px
 		position: absolute
 		cursor: pointer
 		.is-small &
-			top: 3px 
+			top: 3px
 	.header__addnew
 		position: absolute
-		top: 26px 
+		top: 26px
 		left: 50%
-		width: 127px  
-		margin-left: -68px 
+		width: 127px
+		margin-left: -68px
 		text-align: center
 		height: 40px
 		line-height: 34px
-		border: 3px solid #999  
-		font-size: 24px 
-		color: #999999 
+		border: 3px solid #999
+		font-size: 24px
+		color: #999999
 		text-decoration: none
 		border-radius: 37px
 		+transition(all .2s linear)
 		.is-small &
-			top: 5px 
+			top: 5px
 .create
 	background: #f7f7f7
 	.create__in
 		@extend %in
 		position: relative
-		padding-top: 15px 
-		padding-bottom: 25px 
+		padding-top: 15px
+		padding-bottom: 25px
 	.create__close
 		position: absolute
 		right: 0
-		top: 20px  
+		top: 20px
 		+s(close)
 		cursor: pointer
 	.create__what
 		display: block
 		box-sizing: border-box
-		width: 90%
-		border: 1px solid #AEAEAE  
+		width: 100%
+		border: 1px solid #AEAEAE
 		padding: 0 15px
-		height: 52px  
-		line-height: normal 
-		font-size: 25px 
-		color: #333 
-		font-family: Comfortaa,sans-serif 
-		margin-bottom: 19px 
-		+placeholder 
-			color: #D6D6D6 
+		height: 52px
+		line-height: normal
+		font-size: 25px
+		color: #333
+		font-family: Comfortaa,sans-serif
+		margin-bottom: 19px
+		+placeholder
+			color: #D6D6D6
 	h2
 		font-weight: 300
-		color: #999999  
-		font-size: 55px 
+		color: #999999
+		font-size: 55px
 		text-align: center
 		line-height: 1
-		margin-bottom: 40px 
+		margin-bottom: 40px
 	.create__options
-		font-size: 26px 
-		color: #858585 
-		padding-top: 40px 
+		font-size: 26px
+		color: #858585
+		padding-top: 40px
 		+clr
 		select
 			vertical-align: middle
-			margin-left: 10px 
+			margin-left: 10px
 	.create__submit
 		float: right
 		font-weight: 700
-		font-size: 32px  
+		font-size: 32px
 		+g(#27E7DE,#22CFC7)
-		height: 63px 
+		height: 63px
 		line-height: 63px
-		width: 180px  
+		width: 180px
 		text-align: center
 		text-decoration: none
 		display: inline-block
-		color: #fff 
+		color: #fff
 		cursor: pointer
 		border-radius: 6px

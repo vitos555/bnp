@@ -1,75 +1,101 @@
 // Normally mainpage styles
 .content
-	padding-bottom: 150px 
-	padding-top: 20px 
+	padding-bottom: 150px
+	padding-top: 20px
 	@extend %in
 .items
 	+clr
 	.item
 		float: left
 		width: 24%
-		margin-right: 1.33%  
+		margin-right: 1.33%
 		&:last-child
-			margin-right: 0 
+			margin-right: 0
 	&.items_3
 		.item
 			width: 31%
-			margin-right: 3.5% 
+			margin-right: 3.5%
 			&:last-child
-				margin-right: 0 
+				margin-right: 0
 	&.items_2
 		.item
 			width: 48%
-			margin-right: 4% 
+			margin-right: 4%
 			&:last-child
-				margin-right: 0 
+				margin-right: 0
 			.item__picture
-				height: 350px 
-			
+				height: 350px
+
 	&.items_4
 		.item
 			.item__picture
-				height: 210px 
-.item__in
-	border: 1px solid #9C9C9C 
+				height: 210px
+.item
+	border: 1px solid #9C9C9C
 	box-shadow: 0 0 10px rgba(#000,.4)
-	background: #fff 
+	background: #fff
 	position: relative
-	padding-bottom: 57px 
-	margin-bottom: 20px 
+	padding-bottom: 57px
+	margin-bottom: 20px
+	&.item_comments
+		border: none
+		box-shadow: none
+		background: none
+	.item__in
+		border: 1px solid #9C9C9C
+		box-shadow: 0 0 10px rgba(#000,.4)
+		background: #fff
+		margin-bottom: 15px 
+		position: relative
 	.item__picture
-		height: 270px 
-		-webkit-background-size: contain 
-		-o-background-size: contain 
-		background-size: contain 
-		background-position: 50% 50% 
+		height: 420px
+		-webkit-background-size: contain
+		-o-background-size: contain
+		background-size: contain
+		background-position: 50% 50%
 		background-repeat: no-repeat
 		position: relative
 	.item__check
 		position: absolute
 		bottom: 0
 		left: 0
-		right: 0   
+		right: 0
 		top: 0
 		z-index: -1
-		background: url(../img/check1.png) no-repeat 50% 55%
+		background: url(../img/check11.png) no-repeat 50% 55%
 		transition: all .3s linear
 		opacity: 0
-		-webkit-background-size: contain 
-		-o-background-size: contain
-		background-size: contain
+		// -webkit-background-size: contain
+		// -o-background-size: contain
+		// background-size: contain
+	.item__percentage
+		position: absolute
+		color: #999999
+		font-size: 25px  
+		left: 10px 
+		top: 10px 
+		line-height: 1 
+	.item__percentageline
+		position: absolute
+		bottom: 57px 
+		left: 0
+		width: 15px  
+		background: #C9C9C9 
+		z-index: 200 
+		&.is-green
+			background: #44FFFE 
 	&.is-check
 		.item__check
 			opacity: 1
 			z-index: 10
 	&.is-voted
 		.item__check
-			height: 100% 
+			height: 100%
 	&.is-winner
 		&:before
 			position: absolute
-			right: 10px 
-			top: 10px 
+			right: 10px
+			top: 10px
 			content: ' '
 			+s(choicemade)
 	.item__text
@@ -77,11 +103,11 @@
 		bottom: 0
 		left: 0
 		right: 0
-		background: #fff   
-		height: 57px  
-		font-size: 15px 
-		color: #535353 
-		padding: 6px 13px 0 13px 
+		background: #fff
+		height: 57px
+		font-size: 15px
+		color: #535353
+		padding: 6px 13px 0 13px
 		overflow: hidden
 	&.item_finished
 		.item__buy
@@ -89,27 +115,27 @@
 			bottom: 5px
 			left: 0
 			right: 0
-			text-align: center 
+			text-align: center
 			display: none
 		&:hover
 			.item__text
 				display: none
 			.item__buy
 				display: block
-				padding: 0 5px 
+				padding: 0 5px
 				button
-					font-size: 25px 
+					font-size: 25px
 					border-radius: 6px
 					display: block
-					height: 42px 
-					line-height: 42px 
-					font-size: 25px 
+					height: 42px
+					line-height: 42px
+					font-size: 25px
 					font-weight: 700
 					text-decoration: none
-					color: #fff  
-					font-family: Comfortaa,sans-serif 
+					color: #fff
+					font-family: Comfortaa,sans-serif
 					text-align: center
-					width: 100% 
+					width: 100%
 					+g(#26E7DE,#21CFC7)
 	&.item_addtext
 		height: 57px + 212px
@@ -121,133 +147,133 @@
 			right: 0
 			bottom: 0
 			width: 100%
-			padding: 15px 
-			border: none  
-			font-size: 25px     
-			color: #858585 
-			font-family: Comfortaa,sans-serif 
-			box-sizing: border-box 
+			padding: 15px
+			border: none
+			font-size: 25px
+			color: #858585
+			font-family: Comfortaa,sans-serif
+			box-sizing: border-box
 	&.item_add
 		height: 57px + 212px
 		box-shadow: none
-		box-sizing: border-box 
+		box-sizing: border-box
 		border: 2px dashed #B7B7B7
-		background: transparent 
+		background: transparent
 		.item__addicon
 			border-radius: 50%
-			font-size: 30px 
-			color: #A4A4A4 
+			font-size: 30px
+			color: #A4A4A4
 			text-align: center
-			width: 132px 
-			height: 132px 
+			width: 132px
+			height: 132px
 			border: 3px dashed #B7B7B7
 			position: absolute
 			top: 50%
-			left: 50%  
-			margin-left: -66px 
-			margin-top: -66px 
+			left: 50%
+			margin-left: -66px
+			margin-top: -66px
 			line-height: 1.1
 			box-sizing: border-box
-			padding-top: 30px  
+			padding-top: 30px
 			cursor: pointer
 .pick
-	margin-bottom: 20px 
+	margin-bottom: 20px
 	position: relative
 	.pick__title
 		text-align: center
-		font-size: 25px 
+		font-size: 25px
 		font-weight: normal
-		color: #767676 
+		color: #767676
 		margin-bottom: 13px
-	.pick__socials 
+	.pick__socials
 		position: absolute
 		right: 0
 		top: 0
-		+s(share)  
+		+s(share)
 	.pick__fave
 		position: absolute
 		left: 0
 		top: 3px
-		+s(heart)  
+		+s(heart)
 		cursor: pointer
 		&:hover
-			+s(heart_hover) 
+			+s(heart_hover)
 		&.is-active
-			+s(heart_active) 
+			+s(heart_active)
 
 .votes
-	width: 240px 
-	margin: 0 auto 
-	margin-bottom: 18px 	
+	width: 240px
+	margin: 0 auto
+	margin-bottom: 18px
 .vote
-	display: inline-block 
+	display: inline-block
 	margin-right: 10px
 	font-size: 32.5px
-	color: #999 
+	color: #999
 	&:last-child
-		margin-right: 0 
+		margin-right: 0
 	&_total
 		position: relative
 		padding-right: 40px
 		&:after
-			content: "" 
+			content: ""
 			position: absolute
 			top: 9px
 			left: 47px
 			width: 32px
-			height: 25px 
+			height: 25px
 			+s(totalvotes)
 	&_men
 		position: relative
-		padding-right: 30px 
+		padding-right: 30px
 		&:after
-			content: "" 
+			content: ""
 			position: absolute
 			top: 8px
 			left: 37px
 			width: 32px
-			height: 25px 
-			+s(menvotes)	
+			height: 25px
+			+s(menvotes)
 	&_women
-		position: relative	
-		padding-right: 30px 		
+		position: relative
+		padding-right: 30px
 		&:after
-			content: "" 
+			content: ""
 			position: absolute
 			top: 8px
 			left: 37px
 			width: 32px
-			height: 25px 
-			+s(womenvotes)		
+			height: 25px
+			+s(womenvotes)
 .comments
 	position: relative
-	width: 100% 
+	width: 100%
 	border: 1px solid #9C9C9C
 	box-shadow: 0 0 10px rgba(#000,.4)
-	background: #FFF 
-	font-size: 0 
+	background: #FFF
+	font-size: 0
 .comment
 	+clr
 	padding-top: 12px
-	padding-left: 15px  
-	padding-right: 35px 
-	padding-bottom: 25px 
+	padding-left: 15px
+	padding-right: 35px
+	padding-bottom: 25px
 	img
-		float: left 
+		float: left
 		width: 32px
 		height: 32px
-		margin-right: 11px  
-		-webkit-border-radius: 50% 
-		border-radius: 50% 
+		margin-right: 11px
+		-webkit-border-radius: 50%
+		border-radius: 50%
 	&__text
-		margin-left: 49px 
+		margin-left: 49px
 		font-size: 15px
-		line-height: 17px 
-		color: #232323  
+		line-height: 17px
+		color: #232323
 	&__user
-		margin-left: 49px 
-		margin-bottom: 9px 
+		margin-left: 49px
+		margin-bottom: 9px
 		font-size: 17px
-		font-weight: 700 
-		line-height: 17px 
-		color: #232323  
+		font-weight: 700
+		line-height: 17px
+		color: #232323
