@@ -298,9 +298,73 @@
 	margin-top: 39px
 	margin-bottom: 37px
 	padding: 22px 26px 25px
-	font-family: Comfortaa, sans-serif
-	font-size: 20px
+	font:
+		family: Comfortaa, sans-serif
+		size: 20px
 	line-height: 20px
 	color: #FFF
 	+g(#00e8df, #00d0c8)
 	border-radius: 7px
+.explaine
+	position: relative
+	height: 45px
+	margin-bottom: 77px
+	border: 2px solid #b9b9b9
+	box-shadow: 0 0 15px rgba(208, 208, 208, 1)
+	+box
+	&:after
+		content: ""
+		position: absolute
+		top: -12px
+		left: calc(50% - 12px)
+		width: 24px 
+		height: 24px
+		border: 2px solid transparent
+		border-top: 2px solid #b9b9b9
+		border-left: 2px solid #b9b9b9
+		transform: rotate(45deg)
+		background: #FFF
+	&__vote	
+		display: block
+		width: 100%
+		padding: 4px 15px 3px
+		font:
+			family: Comfortaa, sans-serif
+			size: 25px
+		line-height: normal
+		color: #d0d0d0
+		background: #FFF
+.getcomment
+	position: relative
+	height: 45px
+	margin-bottom: 77px
+	border-top: 2px solid #b9b9b9
+	+box
+	&:after
+		content: ""
+		position: absolute
+		top: -12px
+		left: calc(25% - 12px)
+		width: 24px 
+		height: 24px
+		border: 2px solid transparent
+		border-top: 2px solid #b9b9b9
+		border-left: 2px solid #b9b9b9
+		transform: rotate(45deg)
+		background: #f7f7f7
+	.icon-268
+		position: absolute
+		top: 5px
+		right: 0
+		font-size: 30px
+		color: #c4c4c4
+	&__text	
+		display: block
+		width: 100%
+		padding: 4px 15px 3px
+		font:
+			family: Comfortaa, sans-serif
+			size: 25px
+		line-height: normal
+		color: #d0d0d0
+		background: #f7f7f7
