@@ -187,19 +187,25 @@
 		margin-bottom: 13px
 	.pick__socials
 		position: absolute
-		right: 0
-		top: 0
-		+s(share)
+		right: 5px
+		top: -2px
+		cursor: pointer
+		&.icon-494
+			font-size: 35px
+			transform: rotate(90deg)
+			color: #bfbfbf
 	.pick__fave
 		position: absolute
 		left: 0
-		top: 3px
-		+s(heart)
+		top: 0
 		cursor: pointer
-		&:hover
-			+s(heart_hover)
-		&.is-active
-			+s(heart_active)
+		&.icon-512
+			font-size: 35px
+			color: #bfbfbf		
+			&:hover
+				color: #00d0c8	
+
+				
 
 .votes
 	width: 240px
@@ -215,36 +221,27 @@
 	&_total
 		position: relative
 		padding-right: 40px
-		&:after
-			content: ""
-			position: absolute
-			top: 9px
-			left: 47px
-			width: 32px
-			height: 25px
-			+s(totalvotes)
 	&_men
 		position: relative
-		padding-right: 30px
-		&:after
-			content: ""
-			position: absolute
-			top: 8px
-			left: 37px
-			width: 32px
-			height: 25px
-			+s(menvotes)
+		padding-right: 32px
 	&_women
 		position: relative
 		padding-right: 30px
-		&:after
-			content: ""
-			position: absolute
-			top: 8px
-			left: 37px
-			width: 32px
-			height: 25px
-			+s(womenvotes)
+.icon-505
+	position: absolute
+	top: 6px
+	left: 48px
+	font-size: 28px
+.icon-485
+	position: absolute
+	top: 6px
+	left: 43px
+	font-size: 28px
+.icon-484
+	position: absolute
+	top: 6px
+	left: 43px
+	font-size: 28px
 .comments
 	position: relative
 	width: 100%

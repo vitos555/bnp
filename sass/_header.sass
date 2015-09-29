@@ -89,11 +89,13 @@ body
 			.is-small &
 				top: 9px
 	.header__searchsubmit
-		+s(search)
-		right: 55px
-		top: 5px
-		position: absolute
-		cursor: pointer
+		&.icon-606
+			left: 230px
+			top: 9px
+			position: absolute
+			font-size: 28px
+			color: #cbcdcf
+			cursor: pointer
 		.is-small &
 			top: 3px
 	.header__addnew
@@ -124,8 +126,14 @@ body
 		position: absolute
 		right: 0
 		top: 20px
-		+s(close)
-		cursor: pointer
+	.create__close
+		&.icon-504
+			position: absolute
+			right: 0
+			top: 20px
+			font-size: 45px
+			color: #bfbfbf
+			cursor: pointer
 	.create__what
 		display: block
 		box-sizing: border-box
