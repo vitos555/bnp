@@ -278,33 +278,43 @@
 	background: #FFF
 	box-shadow: inset 0 0 27px 5px rgba(230, 230, 230, 1)
 	+clr
-.adplugin__in
-	text-align: center
-	@extend %in
-.adplugin__text
-	float: left
-	width: 245px
-	margin-top: 29px
-	margin-bottom: 24px
-	font-size: 25px
-	line-height: 30px
-	color: #767676
-.adplugin__img
-	margin-top: 19px
-	margin-bottom: 7px
-.adplugin__btn
-	float: right
-	width: 245px
-	margin-top: 39px
-	margin-bottom: 37px
-	padding: 22px 26px 25px
-	font:
-		family: Comfortaa, sans-serif
-		size: 20px
-	line-height: 20px
-	color: #FFF
-	+g(#00e8df, #00d0c8)
-	border-radius: 7px
+	&__in
+		@extend %in
+		position: relative
+		text-align: center
+		.icon-504
+			position: absolute
+			right: -100px
+			top: 42px
+			font-size: 50px
+			color: #bfbfbf
+			cursor: pointer
+
+	&__text
+		float: left
+		width: 245px
+		margin-top: 29px
+		margin-bottom: 24px
+		font-size: 25px
+		line-height: 30px
+		color: #767676
+	&__img
+		margin-top: 19px
+		margin-bottom: 7px
+	&__btn
+		float: right
+		width: 245px
+		margin-top: 39px
+		margin-bottom: 37px
+		padding: 22px 26px 25px
+		font:
+			family: Comfortaa, sans-serif
+			size: 20px
+		line-height: 20px
+		color: #FFF
+		+g(#00e8df, #00d0c8)
+		border-radius: 7px
+
 .explaine
 	position: relative
 	height: 45px
