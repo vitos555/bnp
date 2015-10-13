@@ -20,4 +20,12 @@ head.ready(function() {
 	      $('.top').removeClass('is-small');
 	    }
 	});
+
+	$(".js-custom-scroll").mCustomScrollbar({
+		theme: "light-thick",
+		scrollInertia: 200,
+		mouseWheel:{
+		preventDefault: true,
+		scrollAmount: 150 }
+	});
 });
