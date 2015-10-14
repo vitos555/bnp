@@ -28,4 +28,10 @@ head.ready(function() {
 		preventDefault: true,
 		scrollAmount: 150 }
 	});
+	$('.js-toggleplugin').click(function(event) {
+		$('.adplugin').css('display', 'none');
+	})
+	$('.js-togglepopup').click(function(event) {
+		$('.popup').css('display', 'none');
+	})
 });

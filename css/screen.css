@@ -1667,8 +1667,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 body { font-family: Comfortaa, Arial, sans-serif; font-size: 12px; line-height: 1.4; background: #F7F7F7; }
 
-.header .header__in, .create .create__in, .footer .footer__totoggle, .content, .popup__in, .adplugin__in { max-width: 1200px; min-width: 1000px; width: 95%; margin: 0 auto; }
-@media(max-width: 1400px) { .header .header__in, .create .create__in, .footer .footer__totoggle, .content, .popup__in, .adplugin__in { width: 80%; } }
+.header .header__in, .create .create__in, .footer .footer__totoggle, .content__in, .popup__in, .adplugin__in { max-width: 1200px; min-width: 1000px; width: 95%; margin: 0 auto; }
+@media(max-width: 1400px) { .header .header__in, .create .create__in, .footer .footer__totoggle, .content__in, .popup__in, .adplugin__in { width: 80%; } }
 .top { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
 
 body { padding-top: 90px; padding-bottom: 150px; }
@@ -1758,7 +1758,9 @@ body { padding-top: 90px; padding-bottom: 150px; }
 .item .item__picture { height: 420px; -webkit-background-size: contain; -o-background-size: contain; background-size: contain; background-position: 50% 50%; background-repeat: no-repeat; position: relative; }
 .item .item__check { position: absolute; bottom: 0; left: 0; right: 0; top: 0; z-index: -1; background: url(../img/check11.png) no-repeat 50% 55%; transition: all 0.3s linear; opacity: 0; }
 .item .item__percentage { position: absolute; color: #999999; font-size: 25px; left: 10px; top: 10px; line-height: 1; }
-.item .item__percentageline { position: absolute; bottom: 57px; left: 0; width: 15px; background: #C9C9C9; z-index: 200; }
+.item .item__percentageline-wrap { height: calc(100% -(120px)); position: absolute; bottom: 65px; left: 0; width: 15px; z-index: 200; }
+.item .item__percentageline-wrap.is-green { background: #44FFFE; }
+.item .item__percentageline { position: absolute; bottom: 0; left: 0; width: 15px; background: #C9C9C9; z-index: 200; }
 .item .item__percentageline.is-green { background: #44FFFE; }
 .item.is-check .item__check { opacity: 1; z-index: 10; }
 .item.is-voted .item__check { height: 100%; }
@@ -1846,7 +1848,7 @@ body { padding-top: 90px; padding-bottom: 150px; }
 .comment__text { margin-left: 49px; font-size: 15px; line-height: 17px; color: #232323; }
 .comment__user { margin-left: 49px; margin-bottom: 9px; font-size: 17px; font-weight: 700; line-height: 17px; color: #232323; }
 
-.adplugin { width: 100%; margin-top: -140px; margin-bottom: 30px; background: #FFF; box-shadow: inset 0 0 27px 5px #e6e6e6; *zoom: 1; }
+.adplugin { width: 100%; margin-bottom: 30px; background: #FFF; box-shadow: inset 0 0 27px 5px #e6e6e6; *zoom: 1; }
 .adplugin:after { content: " "; display: table; clear: both; }
 .adplugin__in { position: relative; text-align: center; }
 .adplugin__in .icon-504 { position: absolute; right: -100px; top: 42px; font-size: 50px; color: #bfbfbf; cursor: pointer; }
