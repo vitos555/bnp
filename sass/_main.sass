@@ -40,6 +40,7 @@
 	padding-bottom: 69px
 	margin-bottom: 20px
 	&.item_comments
+		position: relative
 		border: none
 		box-shadow: none
 		background: none
@@ -315,10 +316,7 @@
 		border: none
 		box-shadow: none
 		.comment
-			padding-right: 70px
-		
-
-	
+			padding-right: 70px	
 .pick
 	margin-bottom: 20px
 	position: relative
@@ -348,6 +346,7 @@
 			&:hover
 				color: #00d0c8	
 .votes
+	position: relative
 	width: 240px
 	margin: 0 auto
 	margin-bottom: 18px
@@ -366,7 +365,15 @@
 		padding-right: 32px
 	&_women
 		position: relative
-		padding-right: 30px
+.add-comment
+	position: absolute
+	top: 15px
+	right: -95px
+	border-radius: 50%
+	+s(add-comment)
+	cursor: pointer
+	&:hover
+		opacity: .7
 .icon-505
 	position: absolute
 	top: 6px
@@ -382,6 +389,13 @@
 	top: 6px
 	left: 43px
 	font-size: 28px
+.icon-559
+	position: absolute
+	top: 0
+	right: -140px
+	font-size: 40px
+	color: #999
+	cursor: pointer	
 .comments
 	position: relative
 	width: 100%
@@ -396,7 +410,7 @@
 	padding-left: 15px
 	padding-right: 35px
 	padding-bottom: 25px
-	.add-vote, .add-flag
+	.add-vote, .add-report
 		position: relative
 		top: 0
 		left: 130px
@@ -405,7 +419,7 @@
 		cursor: pointer	
 		&:hover
 			color: #ccc				
-		.add-flag
+		.add-report
 			right: 55px
 		.icon-504, .icon-380
 			position: absolute
@@ -541,3 +555,62 @@
 		line-height: normal
 		color: #d0d0d0
 		background: #f7f7f7
+.report
+	position: absolute
+	top: -52px
+	right: 65px
+	display: inline-block
+	width: 150px
+	padding: 10px 5px 40px 10px
+	border: 2px solid #b9b9b9
+	background: #fff
+	box-shadow: 2px 2px 15px rgba(#000, .3)
+	z-index: 100
+
+.form
+	position: relative
+	&__item
+		display: block
+		margin-bottom: 5px
+		label
+			position: relative
+		input[type="radio"]
+			display: none
+		input[type="radio"] + label .form__item-btn
+			position: absolute
+			top: 3px
+			display: inline-block
+			vertical-align: top
+			+s(radio)
+		input[type="radio"]:checked + label .form__item-btn
+			+s(radio-checked)
+		&-text
+			display: inline-block
+			vertical-align: top
+			width: 88%
+			margin-left: 13px
+			font-size: 11px
+			color: #7c7c7c
+	&__submit
+		position: absolute
+		bottom: -35px
+		right: 5px
+		padding: 3px 20px
+		border-radius: 9px
+		color: #fff
+		background: #b9b9b9
+		&:hover
+			opacity: .7
+
+.form:after
+	content: ""
+	position: absolute
+	top: 50%
+	right: -17px
+	width: 20px
+	height: 20px
+	background: #fff	
+	transform: rotate(45deg)
+	border-top: 2px solid #b9b9b9
+	border-right: 2px solid #b9b9b9
+
