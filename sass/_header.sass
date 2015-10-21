@@ -27,8 +27,70 @@ body
 		img
 			.is-small &
 				width: 200px
+	.header__login-links
+		position: absolute
+		top: 20px
+		right: 0
+		width: 170px
+		font-size: 0
+		+transition(all .2s linear)
+		a
+			display: inline-block
+			vertical-align: top	
+			text-decoration: none
+		.login-link
+			margin-bottom: 5px	
+			margin-left: 10px	
+			margin-right: 40px
+			+transition(all .2s linear)
+			&:hover
+				color: #0293F3 
+		.login-link
+			font-size: 15px		
+			color: #555
+			text-shadow: 0 1px rgba(#fff, 1)
+		.login-link-soc
+			height: 23px
+			line-height: 25px
+			padding-right: 10px
+			border: 1px solid #7F8FA7
+			border-radius: 3px
+			font-size: 13px			
+			color: #fff
+			text-shadow: 0 1px rgba(#000, 1)
+		.fb-btn
+			position: relative
+			margin-right: 15px
+			padding-left: 20px			
+			+g(#8ca3c9, #445e8f)
+			i
+				position: absolute
+				top: 4px
+				left: 7px
+				+s(f-btn)
+			&:hover
+				opacity: .8
+		.tw-btn
+			position: relative		
+			padding-left: 30px			
+			+g(#6fd1fe, #2598cf)
+			i
+				position: absolute
+				top: 4px
+				left: 7px			
+				+s(tw-btn)
+			&:hover
+				opacity: .8
+		.login-link:nth-child(2),
+		.login-link-soc:nth-child(4)
+			margin: 0
+		.is-small &
+			top: 0
+			.login-link
+				margin-bottom: 2px
 
 	.header__user
+		display: none
 		position: absolute
 		top: 17px
 		right: 0
@@ -48,8 +110,8 @@ body
 	.header__search
 		position: absolute
 		top: 22px
-		right: 100px
-		width: 320px
+		right: 200px
+		width: 180px
 		background: #FFFFFF
 		height: 47px
 		+transition(all .2s linear)
@@ -59,10 +121,10 @@ body
 	.header__searchinput
 		height: 47px
 		line-height: normal
-		font-size: 22px
+		font-size: 18px
 		font-family: Comfortaa,sans-serif
-		width: 222px
-		padding-left: 20px
+		width: 90px
+		padding-left: 15px
 		+transition(all .2s linear)
 		.is-small &
 			height: 40px
@@ -90,10 +152,10 @@ body
 				top: 9px
 	.header__searchsubmit
 		&.icon-606
-			left: 230px
+			left: 100px
 			top: 9px
 			position: absolute
-			font-size: 28px
+			font-size: 25px
 			color: #cbcdcf
 			cursor: pointer
 		.is-small &
@@ -115,6 +177,43 @@ body
 		+transition(all .2s linear)
 		.is-small &
 			top: 5px
+	.is-login
+		right: 100px
+		width: 320px
+		.header__searchinput
+			font-size: 22px
+			width: 222px
+			padding-left: 20px
+		.header__searchsubmit
+			left: 230px
+			font-size: 28px
+
+.dropdown-menu
+	background: #BFBFBF
+	box-shadow: inset 0 2px 7px rgba(#000, .2), 0 2px 7px rgba(#000, .2) 
+	margin-bottom: 50px
+.dropdown-menu__in
+	@extend %in
+	position: relative
+	height: 50px
+	font-size: 0
+	+clr
+	li
+		float: left
+		a
+			display: block
+			padding: 0 20px
+			font-size: 15px
+			line-height: 50px
+			color: #555 
+			text-decoration: none
+			&:hover
+				background: #F80287
+				box-shadow: inset 0 2px 7px rgba(#000, .2), 0 2px 7px rgba(#000, .2) 
+
+	.right
+		float: right
+
 .create
 	background: #f7f7f7
 	.create__in
