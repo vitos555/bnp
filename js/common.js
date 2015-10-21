@@ -10,7 +10,11 @@ head.ready(function() {
 		return false;
 	});
 	$('.item').click(function(event) {
-		$(this).addClass('is-voted');
+		$(this).toggleClass('is-voted');
+	});
+	
+	$('.item').click(function(event) {
+		$(this).toggleClass('is-runcheckmark');
 	});
 
 	$(window).scroll(function () {

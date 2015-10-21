@@ -20,6 +20,9 @@
 				margin-right: 0
 			.item__picture
 				height: 375px
+			.item__check
+				&:before
+					bottom: 99px				
 	&.items_2
 		.item
 			width: 46.7%
@@ -28,6 +31,9 @@
 				margin-right: 0
 			.item__picture
 				height: 604px
+			.item__check
+				&:before
+					bottom: 214px
 
 	&.items_4
 		.item
@@ -65,23 +71,33 @@
 		bottom: 0
 		left: 0
 		right: 0
-		top: 0
+		// top: 0
 		z-index: -1
-		background: url(../img/check11.png) no-repeat 50% 55%
+		// background: url(../img/check11.png) no-repeat 50% 55%
+		overflow: hidden
 		transition: all .3s linear
 		opacity: 0
 		// -webkit-background-size: contain
 		// -o-background-size: contain
 		// background-size: contain
+		&:before
+			content: ""
+			position: absolute
+			bottom: 49px
+			left: 50%
+			margin-left: -90px
+			background: url(../img/check11.png) no-repeat 50% 50%
+			width: 180px
+			height: 174px
 	.item__percentage
 		position: absolute
-		color: #999999
+		color: #999
 		font-size: 25px  
 		left: 10px 
 		top: 10px 
 		line-height: 1 
 	.item__percentageline-wrap
-		height: calc(100% -(120px))
+		height: calc(100% - 120px)
 		position: absolute
 		bottom: 65px 
 		left: 0
@@ -98,13 +114,26 @@
 		z-index: 200 
 		&.is-green
 			background: #44FFFE 
-	&.is-check
-		.item__check
-			opacity: 1
-			z-index: 10
+	// &.is-check
+	// 	.item__check
+	// 		opacity: 1
+	// 		z-index: 10
 	&.is-voted
 		.item__check
 			height: 100%
+	&.is-runcheckmark
+		+keyframes(item__check)
+			from
+				height: 0
+			to
+				height: 100%
+		.item__check
+			opacity: 1
+			z-index: 10	
+			height: 0	
+			+animation(item__check .6s linear forwards)
+		.item__picture:after
+			opacity: 1	
 	&.is-winner
 		&:before
 			position: absolute
@@ -191,7 +220,22 @@
 			box-sizing: border-box
 			padding-top: 30px
 			cursor: pointer
-
+.item__picture:after
+	content: ""
+	transition: all .3s linear
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 180px
+	height: 174px
+	margin-top: -87px
+	margin-left: -90px
+	background: url(../img/check-is-hover.png) no-repeat 50% 50%
+	opacity: 0
+	transition: all .2s linear
+.item:hover
+	.item__picture:after
+		opacity: 1
 .popup
 	position: absolute
 	top: 88%
@@ -327,15 +371,21 @@
 		box-shadow: none
 		.comment
 			padding-right: 70px	
+			.add-vote, .add-report
+				left: 130px
 .pick
 	margin-bottom: 20px
 	position: relative
 	.pick__title
 		text-align: center
-		font-size: 25px
-		font-weight: normal
-		color: #767676
 		margin-bottom: 13px
+		a
+			font-size: 25px
+			font-weight: normal
+			color: #767676
+			text-decoration: none
+			&:hover
+				text-decoration: underline
 	.pick__socials
 		position: absolute
 		right: 5px
@@ -346,10 +396,19 @@
 			transform: rotate(90deg)
 			color: #bfbfbf
 	.pick__fave
+		display: block
 		position: absolute
 		left: 0
 		top: 0
 		cursor: pointer
+		// &_liked
+		// 	background: #bfbfbf 
+		// 	&:hover
+		// 		background: #00d0c8
+		// &_disliked
+		// 	background: #00d0c8
+		// 	&:hover
+		// 		background: #bfbfbf
 		&.icon-512
 			font-size: 35px
 			color: #bfbfbf		
@@ -423,7 +482,7 @@
 	.add-vote, .add-report
 		position: relative
 		top: 0
-		left: 130px
+		left: 80px
 		font-size: 13px
 		color: #d6d6d6
 		cursor: pointer	
