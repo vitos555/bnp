@@ -13,8 +13,18 @@ head.ready(function() {
 		$(this).toggleClass('is-voted');
 	});
 	
+	$('.pick__fave').click(function(event) {
+		$('.icon-512').toggleClass('pick__fave_liked');
+	});
+
 	$('.item').click(function(event) {
 		$(this).toggleClass('is-runcheckmark');
+	});
+
+	$('.js-share').click(function(event) {
+		var _this = $(this);
+		_this.toggleClass('is-white-bg');
+		_this.siblings('.pick__socials-list').toggleClass('is-runsociallist');
 	});
 
 	$(window).scroll(function () {
@@ -24,6 +34,7 @@ head.ready(function() {
 	      $('.top').removeClass('is-small');
 	    }
 	});
+
 
 	$(".js-custom-scroll").mCustomScrollbar({
 		theme: "light-thick",
