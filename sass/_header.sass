@@ -5,31 +5,34 @@
 	right: 0
 	z-index: 1000
 body
-	padding-top: 90px
+	padding-top: 70px
 	padding-bottom: 150px
 .header
 	background: #BFBFBF
+	.is-small &
+		box-shadow: 0 0 5px rgba(#000,.5)
 	.header__in
 		@extend %in
 		position: relative
-		height: 90px
+		height: 75px
 		+transition(all .2s linear)
 		.is-small &
 			height: 50px
 	.header__logo
 		position: absolute
-		top: 23px
+		top: 18px
 		left: 0
 		+transition(all .2s linear)
 		.is-small &
 			top: 8px
 			width: 60%
 		img
+			width: 220px 
 			.is-small &
 				width: 200px
 	.header__login-links
 		position: absolute
-		top: 20px
+		top: 10px
 		right: 0
 		width: 170px
 		font-size: 0
@@ -109,7 +112,7 @@ body
 				height: 30px
 	.header__search
 		position: absolute
-		top: 22px
+		top: 12px
 		right: 200px
 		width: 180px
 		background: #FFFFFF
@@ -159,10 +162,10 @@ body
 			color: #cbcdcf
 			cursor: pointer
 		.is-small &
-			top: 3px
+			top: 5px
 	.header__addnew
 		position: absolute
-		top: 26px
+		top: 17px
 		left: 50%
 		width: 127px
 		margin-left: -68px

@@ -488,15 +488,26 @@
 		padding-right: 32px
 	&_women
 		position: relative
-.add-comment
-	position: absolute
-	top: 40px
-	right: -95px
+.add-poll
+	position: fixed
+	right: 20px
+	bottom: 55px
 	border-radius: 50%
 	+s(add-comment)
 	cursor: pointer
+	z-index: 100 
 	&:hover
 		opacity: .7
+	&_header
+		position: absolute
+		left: 50% 
+		top: 0
+		margin-left: -20px  
+		right: auto
+		bottom: auto
+		.is-small &
+			transform: scale(.6)
+			top: -13px 
 .icon-505
 	position: absolute
 	top: 6px
@@ -584,7 +595,7 @@
 		.icon-504
 			position: absolute
 			right: -80px
-			top: 42px
+			top: 44px
 			font-size: 50px
 			color: #bfbfbf
 			cursor: pointer

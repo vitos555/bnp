@@ -13,11 +13,11 @@
 		@extend %in
 	.footer__toggle
 		position: absolute 
-		top: -50px 
+		top: -40px 
 		color: #fff
-		font-size: 26px  
-		height: 50px 
-		line-height: 50px 
+		font-size: 21px  
+		height: 40px 
+		line-height: 40px 
 		padding: 0 25px 
 		background: #333333 
 		border-top-left-radius: 10px
@@ -30,9 +30,10 @@
 			display: inline-block
 			vertical-align: middle
 			margin-left: 10px 
+			transform: scale(.8)
 		&.is-active
 			i
-				transform: rotate(180deg)
+				transform: rotate(180deg) scale(.8)
 	.footer__legal
 		text-align: center
 		font-size: 14px 
