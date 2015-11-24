@@ -32,11 +32,13 @@ body
 				width: 200px
 	.header__login-links
 		position: absolute
-		top: 10px
+		margin-top: 24px
 		right: 0
 		width: 170px
 		font-size: 0
 		+transition(all .2s linear)
+		.is-small &
+			margin-top: 13px 
 		a
 			display: inline-block
 			vertical-align: top	
@@ -44,23 +46,14 @@ body
 		.login-link
 			margin-bottom: 5px	
 			margin-left: 10px	
-			margin-right: 40px
-			+transition(all .2s linear)
-			&:hover
-				color: #0293F3 
-		.login-link
-			font-size: 15px		
-			color: #555
-			text-shadow: 0 1px rgba(#fff, 1)
-		.login-link-soc
-			height: 23px
-			line-height: 25px
-			padding-right: 10px
-			border: 1px solid #7F8FA7
-			border-radius: 3px
-			font-size: 13px			
-			color: #fff
-			text-shadow: 0 1px rgba(#000, 1)
+			margin-right: 20px
+		.btn
+			height: 24px
+			padding: 7px 10px
+			font:
+				size: 15px
+				weight: 700
+			line-height: 10px
 		.fb-btn
 			position: relative
 			margin-right: 15px
@@ -85,7 +78,6 @@ body
 			&:hover
 				opacity: .8
 		.login-link:nth-child(2),
-		.login-link-soc:nth-child(4)
 			margin: 0
 		.is-small &
 			top: 0

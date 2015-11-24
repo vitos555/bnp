@@ -165,20 +165,12 @@
 			.item__buy
 				display: block
 				padding: 0 5px
-				button
-					font-size: 25px
-					border-radius: 6px
-					display: block
+				.btn
+					width: 100%
 					height: 42px
 					line-height: 42px
-					font-size: 25px
 					font-weight: 700
-					text-decoration: none
-					color: #fff
-					font-family: Comfortaa,sans-serif
-					text-align: center
-					width: 100%
-					+g(#26E7DE,#21CFC7)
+					font-size: 25px
 	&.item_addtext
 		height: 346px
 		position: relative
@@ -234,6 +226,19 @@
 .item:hover
 	.item__picture:after
 		opacity: 1
+.btn
+	display: inline-block
+	vertical-align: top
+	border-radius: 6px
+	font:
+		family: Comfortaa,sans-serif
+	color: #fff
+	text-decoration: none
+	text-align: center
+	+g(#26E7DE,#21CFC7)
+	+transition(all .2s linear)
+	&:hover
+		background: #67ECE6
 .popup
 	position: absolute
 	top: 88%
@@ -341,24 +346,14 @@
 		border-bottom: 1px solid #bfbfbf
 		padding: 18px 0
 		font-size: 0
-		button
-			display: inline-block
-			vertical-align: top
-			width: 48%
-			margin-right: 4%
-			font-size: 25px
-			border-radius: 6px
-			height: 42px
-			line-height: 42px
-			font-size: 25px
-			font-weight: 700
-			text-decoration: none
-			color: #fff
-			font-family: Comfortaa,sans-serif
-			text-align: center
-			+g(#26E7DE,#21CFC7)
-			&:last-child
-				margin-right: 0
+	.btn
+		width: 48%
+		margin-right: 4%
+		font-size: 25px
+		height: 42px
+		line-height: 42px
+		&:last-child
+			margin-right: 0 
 	.votes
 		margin-bottom: 0
 	.comments
@@ -599,7 +594,6 @@
 			font-size: 50px
 			color: #bfbfbf
 			cursor: pointer
-
 	&__text
 		float: left
 		width: 245px
@@ -611,20 +605,15 @@
 	&__img
 		margin-top: 19px
 		margin-bottom: 7px
-	&__btn
+	.btn
 		float: right
 		width: 245px
+		height: 60px 
 		margin-top: 39px
 		margin-bottom: 37px
-		padding: 22px 26px 25px
-		font:
-			family: Comfortaa, sans-serif
-			size: 20px
+		padding: 0 26px
+		font-size: 20px
 		line-height: 20px
-		color: #FFF
-		+g(#00e8df, #00d0c8)
-		border-radius: 7px
-
 .explaine
 	position: relative
 	height: 45px
