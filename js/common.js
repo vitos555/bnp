@@ -21,6 +21,17 @@ head.ready(function() {
 		$(this).toggleClass('is-runcheckmark');
 	});
 
+	
+	$('.js-search').focus(function(event) {
+		$('.header__search').addClass('header__search_wide');
+	});
+
+	$('.js-search').blur(function(event) {
+		$('.header__search').removeClass('header__search_wide');
+	});
+
+
+
 	$('.js-share').click(function(event) {
 		var _this = $(this);
 		_this.toggleClass('is-white-bg');

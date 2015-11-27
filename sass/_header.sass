@@ -38,6 +38,7 @@ body
 		font-size: 0
 		+transition(all .2s linear)
 		.is-small &
+			
 			margin-top: 13px 
 		a
 			display: inline-block
@@ -113,6 +114,12 @@ body
 		.is-small &
 			top: 4px
 			height: 40px
+			
+	.header__search_wide
+		width: 260px 
+		.header__searchinput
+			width: 165px
+			 
 	.header__searchinput
 		height: 47px
 		line-height: normal
@@ -147,7 +154,7 @@ body
 				top: 9px
 	.header__searchsubmit
 		&.icon-606
-			left: 100px
+			right: 60px
 			top: 9px
 			position: absolute
 			font-size: 25px
@@ -216,6 +223,18 @@ body
 		position: relative
 		padding-top: 20px
 		padding-bottom: 25px
+	// .close-item-icon	
+	// 	content: ""
+	// 	position: absolute
+	// 	display: block
+	// 	vertical-align: top
+	// 	top: 10px
+	// 	right: 15px
+	// 	+s(close1)  
+	// 	z-index: 500
+	// 	cursor: pointer 
+	// .close-item	
+	// 	display: none 	
 	.create__close
 		position: absolute
 		right: 0
@@ -261,16 +280,10 @@ body
 		float: right
 		font-weight: 700
 		font-size: 32px
-		+g(#27E7DE,#22CFC7)
 		height: 63px
 		line-height: 63px
 		width: 180px
-		text-align: center
-		text-decoration: none
-		display: inline-block
-		color: #fff
 		cursor: pointer
-		border-radius: 6px
 	.create__select_wrapper
 		position: relative
 		display: inline-block
@@ -300,4 +313,4 @@ body
 		-moz-appearance: none
 		appearance: none 
 		z-index: 10
-		
+	
