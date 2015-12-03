@@ -17,10 +17,14 @@ head.ready(function() {
 		$('.icon-512').toggleClass('pick__fave_liked');
 	});
 
-	$('.item').click(function(event) {
-		$(this).toggleClass('is-runcheckmark');
-	});
+    $('.close-item-icon').click(function(event) {
+    	var _this = $(this);
+        _this.parent('.item').toggleClass('close-item');
+    });
 
+    $('.item').click(function(event) {
+        $(this).toggleClass('is-runcheckmark');
+    });
 	
 	$('.js-search').focus(function(event) {
 		$('.header__search').addClass('header__search_wide');
