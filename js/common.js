@@ -24,6 +24,7 @@ head.ready(function() {
 
     $('.item').click(function(event) {
         $(this).toggleClass('is-runcheckmark');
+        $(this).parents('.pick').addClass('is-finished');
     });
 	
 	$('.js-search').focus(function(event) {

@@ -21,7 +21,7 @@
 		.item
 			width: 30.8%
 			margin-right: 3.8%
-			&:last-child
+			&:last-child 
 				margin-right: 0
 			.item__picture
 				height: 375px
@@ -156,7 +156,7 @@
 			opacity: 1
 			z-index: 10	
 			height: 0	
-			+animation(item__check .6s linear forwards)
+			+animation(item__check 3s linear forwards) 
 		.item__picture:after
 			opacity: 1	
 	&.is-winner
@@ -250,7 +250,15 @@
 	background: url(../img/check-is-hover.png) no-repeat 50% 50%
 	opacity: 0
 	transition: all .2s linear
-.item:hover
+	.invited &
+		
+.item:hover,.invited .item 
+	.item__picture:after
+		opacity: 1
+.is-finished .item:hover
+	.item__picture:after
+		opacity: 0 
+.is-finished .item.is-runcheckmark:hover
 	.item__picture:after
 		opacity: 1
 .btn
@@ -482,7 +490,7 @@
 				color: #bfbfbf		
 .votes
 	position: relative
-	width: 240px
+	text-align: center
 	margin: 0 auto
 	margin-bottom: 18px
 .vote
@@ -490,14 +498,19 @@
 	margin-right: 10px
 	font-size: 32.5px
 	color: #999
+	i
+		display: inline-block
+		vertical-align: middle
+		font-size: 28px 
+		margin-left: 5px 
 	&:last-child
 		margin-right: 0
 	&_total
 		position: relative
-		padding-right: 40px
+		// padding-right: 40px
 	&_men
 		position: relative
-		padding-right: 32px
+		// padding-right: 32px
 	&_women
 		position: relative
 .add-poll
@@ -520,28 +533,28 @@
 		.is-small &
 			transform: scale(.6)
 			top: -13px 
-.icon-505
-	position: absolute
-	top: 6px
-	left: 48px
-	font-size: 28px
-.icon-485
-	position: absolute
-	top: 6px
-	left: 43px
-	font-size: 28px
-.icon-484
-	position: absolute
-	top: 6px
-	left: 43px
-	font-size: 28px
+// .icon-505
+// 	position: absolute
+// 	top: 6px
+// 	left: 48px
+// 	font-size: 28px
+// .icon-485
+// 	position: absolute
+// 	top: 6px
+// 	left: 43px
+// 	font-size: 28px
+// .icon-484
+// 	position: absolute
+// 	top: 6px
+// 	left: 43px
+// 	font-size: 28px
 .icon-559
-	position: absolute
-	top: 0
-	right: -128px
+	// position: absolute
+	// top: 0
+	// right: -128px
 	font-size: 40px
-	color: #999
-	cursor: pointer	
+	// color: #999
+	// cursor: pointer	
 .comments
 	position: relative
 	width: 100%
