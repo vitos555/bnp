@@ -1807,6 +1807,9 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .item .item__check:before { content: ""; position: absolute; bottom: 49px; left: 50%; margin-left: -90px; background: url(../img/check11.png) no-repeat 50% 50%; width: 180px; height: 174px; }
 .popup-preview .item .item__check:before { bottom: 163px; }
 .item .item__percentage { position: absolute; color: #999; font-size: 25px; left: 10px; top: 10px; line-height: 1; z-index: 5; }
+.item .item__trash { position: absolute; left: 0; top: 0; width: 170px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, 0.75); font-size: 100px; text-align: center; line-height: 170px; z-index: 20; left: 50%; margin-left: -85px; top: 30px; display: none; cursor: pointer; }
+.item .item__trash i { font-size: 100px; color: #999999; position: relative; top: 15px; }
+.item:hover .item__trash { display: block; }
 .items_4 .item .item__percentage { font-size: 20px; }
 .item .item__percentageline-wrap { height: calc(100% - 120px); position: absolute; bottom: 65px; left: 0; width: 15px; z-index: 200; }
 .item .item__percentageline-wrap.is-green { background: #44FFFE; }
@@ -1834,6 +1837,9 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .item.item_add .item__addicon { border-radius: 50%; font-size: 30px; color: #A4A4A4; text-align: center; width: 132px; height: 132px; border: 3px dashed #B7B7B7; position: absolute; top: 50%; left: 50%; margin-left: -66px; margin-top: -66px; line-height: 1.1; box-sizing: border-box; padding-top: 30px; cursor: pointer; }
 
 .item__picture:after { content: ""; transition: all 0.3s linear; position: absolute; top: 50%; left: 50%; width: 180px; height: 174px; margin-top: -87px; margin-left: -90px; background: url(../img/check-is-hover.png) no-repeat 50% 50%; opacity: 0; transition: all 0.2s linear; }
+.create .item__picture:after { display: none; }
+
+.create .item__check { display: none; }
 
 .item:hover .item__picture:after, .invited .item .item__picture:after { opacity: 1; }
 
