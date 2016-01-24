@@ -67,6 +67,26 @@
 		border: none
 		box-shadow: none
 		background: none
+	.item__zoom
+		position: absolute
+		top: 0
+		left: 0
+		right: 0 
+		height: 50px
+		background: rgba(#fff, .6)   
+		z-index: 20 
+		display: none
+		cursor: pointer
+		text-align: center
+		font-size: 35px 
+		color: #000 
+		line-height: 50px 
+		i
+			position: relative
+			top: 4px 
+	&:hover
+		.item__zoom
+			display: block
 	.item__in
 		padding-bottom: 69px
 		border: 1px solid #9C9C9C
@@ -305,10 +325,21 @@
 			&:hover
 				cursor: pointer
 				+s(popup-next-b)
+	.close-btn
+		position: absolute
+		top: 20px
+		right: 20px
+		font-size: 40px
+		color: #afafaf
+		cursor: pointer
 .popup-preview
 	width: 44%
 	position: relative
 	float: left
+	.popup_alt &
+		float: none
+		display: inline-block
+		vertical-align: middle
 	.item
 		margin: 0 auto
 		margin-bottom: 40px
@@ -347,18 +378,18 @@
 				cursor: pointer
 		li:last-child
 			margin-right: 0
+	
 .popup-descr 
 	position: relative		
 	float: right
 	width: 45%
 	+clr
-	.close-btn
-		position: absolute
-		top: -40px
-		right: -40px
-		font-size: 40px
-		color: #afafaf
-		cursor: pointer
+	.popup_alt &
+		float: none
+		display: inline-block
+		vertical-align: middle
+		margin-left: 9% 
+	
 	&__text
 		margin-bottom: 15px
 		font-size: 25px

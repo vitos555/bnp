@@ -23,7 +23,10 @@ head.ready(function() {
     });
 
     $('.item').click(function(event) {
-        $(this).toggleClass('is-runcheckmark');
+        $(this).toggleClass('is-runcheckmark').on( 'webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function(){
+	    // callback goes here
+	    alert('animation finished');
+	});
         $(this).parents('.pick').addClass('is-finished');
     });
 	
