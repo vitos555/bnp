@@ -32,58 +32,170 @@ body
 				width: 200px
 	.header__login-links
 		position: absolute
-		margin-top: 24px
+		margin-top: 20px
 		right: 0
 		width: 170px
 		font-size: 0
 		+transition(all .2s linear)
-		.is-small &
-			
-			margin-top: 13px 
-		a
-			display: inline-block
-			vertical-align: top	
+		text-align: right
+		 
+		.header__login
+			color: #767676 
+			font-size: 24px 
 			text-decoration: none
-		.login-link
-			margin-bottom: 5px	
-			margin-left: 10px	
-			margin-right: 20px
-		.btn
-			height: 24px
-			padding: 7px 10px
-			font:
-				size: 15px
-				weight: 700
-			line-height: 10px
-		.fb-btn
-			position: relative
-			margin-right: 15px
-			padding-left: 20px			
-			+g(#8ca3c9, #445e8f)
-			i
+		.header__logindrop
+			position: absolute
+			width: 250px
+			border: 1px solid #a4a4a4 
+			background: #fff 
+			text-align: center
+			top: 40px 
+			right: 0 
+			z-index: 20 
+			box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.21)
+			padding: 15px 30px 
+			font-size: 20px  
+			display: none
+			&.is-open
+				display: block
+			&:before
+				content: "" 
 				position: absolute
-				top: 4px
-				left: 7px
-				+s(f-btn)
-			&:hover
-				opacity: .8
-		.tw-btn
-			position: relative		
-			padding-left: 30px			
-			+g(#6fd1fe, #2598cf)
-			i
-				position: absolute
-				top: 4px
-				left: 7px			
-				+s(tw-btn)
-			&:hover
-				opacity: .8
-		.login-link:nth-child(2),
-			margin: 0
+				border: #a4a4a4 
+				right: 10px 
+				top: -10px 
+				z-index: -1
+				width: 27px
+				height: 27px
+				background: #fff  
+				transform: rotate(45deg)
+				transform-origin: 0 0
+				
+			.login__fb,.login__tw
+				background: #3c5a96 
+				height: 40px 
+				line-height: 40px
+				border-radius: 8px  
+				text-align: center
+				display: block
+				color: #fff 
+				font-size: 12px 
+				cursor: pointer
+				position: relative
+				text-decoration: none
+				&:hover
+					background: darken(#3c5a96, 10%) 
+				i
+					position: absolute
+					left: 8px 
+					top: 50%
+					transform: translate(0,-50%) 
+					width: 16px 
+					height: 16px 
+					background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MDAiIGlkPSJzdmcyIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI1MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzIGlkPSJkZWZzNCIvPjxnIGlkPSJsYXllcjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsLTU1Mi4zNjIxOCkiPjxwYXRoIGQ9Ik0gNTAgMCBDIDIyLjMgMCAtMS4wMDE4NjM4ZS0wMTYgMjIuMyAwIDUwIEwgMCA0NTAgQyAwIDQ3Ny43IDIyLjMgNTAwIDUwIDUwMCBMIDIyNS4xODc1IDUwMCBMIDIyNS4xODc1IDI3Ni4wMzEyNSBMIDE4MC45MDYyNSAyNzYuMDMxMjUgTCAxODAuOTA2MjUgMTk2Ljg0Mzc1IEwgMjI1LjE4NzUgMTk2Ljg0Mzc1IEwgMjI1LjE4NzUgMTQ1LjYyNSBDIDIyNS4xODc1IDEwOC45NDg1NyAyNDIuNjIyODEgNTEuNjU2MjUgMzE5LjE4NzUgNTEuNjU2MjUgTCAzODguMTU2MjUgNTEuOTA2MjUgTCAzODguMTU2MjUgMTI4Ljc1IEwgMzM4LjA2MjUgMTI4Ljc1IEMgMzI5LjkwMjkyIDEyOC43NSAzMTguMzEyNSAxMzIuODMyOTUgMzE4LjMxMjUgMTUwLjMxMjUgTCAzMTguMzEyNSAxOTYuODQzNzUgTCAzODkuMjgxMjUgMTk2Ljg0Mzc1IEwgMzgxLjE1NjI1IDI3Ni4wMzEyNSBMIDMxOC4zMTI1IDI3Ni4wMzEyNSBMIDMxOC4zMTI1IDUwMCBMIDQ1MCA1MDAgQyA0NzcuNyA1MDAgNTAwIDQ3Ny43IDUwMCA0NTAgTCA1MDAgNTAgQyA1MDAgMjIuMyA0NzcuNyAtMS4wMDE4NjM4ZS0wMTYgNDUwIDAgTCA1MCAwIHogIiBpZD0icmVjdDI5OTUiIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsNTUyLjM2MjE4KSIvPjwvZz48L3N2Zz4=)
+					background-size: contain
+					background-repeat: no-repeat 
+					
+			.login__tw
+				background: #59adeb 
+				&:hover
+					background: darken(#59adeb, 10%) 
+				i
+					background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMC8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQnPjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIgMzIiIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMCIgdmlld0JveD0iMCAwIDMyIDMyIiB3aWR0aD0iMzJweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTMxLjk5Myw2LjA3N0MzMC44MTYsNi42LDI5LjU1Miw2Ljk1MywyOC4yMjMsNy4xMWMxLjM1NS0wLjgxMiwyLjM5Ni0yLjA5OCwyLjg4Ny0zLjYzICBjLTEuMjY5LDAuNzUxLTIuNjczLDEuMjk5LTQuMTY4LDEuNTkyQzI1Ljc0NCwzLjc5NywyNC4wMzgsMywyMi4xNDksM2MtMy42MjUsMC02LjU2MiwyLjkzOC02LjU2Miw2LjU2MyAgYzAsMC41MTQsMC4wNTcsMS4wMTYsMC4xNjksMS40OTZDMTAuMzAxLDEwLjc4NSw1LjQ2NSw4LjE3MiwyLjIyNyw0LjIwMWMtMC41NjQsMC45Ny0wLjg4OCwyLjA5Ny0wLjg4OCwzLjMgIGMwLDIuMjc4LDEuMTU5LDQuMjg2LDIuOTE5LDUuNDY0Yy0xLjA3NS0wLjAzNS0yLjA4Ny0wLjMyOS0yLjk3Mi0wLjgyMWMtMC4wMDEsMC4wMjctMC4wMDEsMC4wNTYtMC4wMDEsMC4wODIgIGMwLDMuMTgxLDIuMjYyLDUuODM0LDUuMjY1LDYuNDM3Yy0wLjU1LDAuMTQ5LTEuMTMsMC4yMy0xLjcyOSwwLjIzYy0wLjQyNCwwLTAuODM0LTAuMDQxLTEuMjM0LTAuMTE3ICBjMC44MzQsMi42MDYsMy4yNTksNC41MDQsNi4xMyw0LjU1OGMtMi4yNDUsMS43Ni01LjA3NSwyLjgxMS04LjE1LDIuODExYy0wLjUzLDAtMS4wNTMtMC4wMzEtMS41NjYtMC4wOTIgIEMyLjkwNSwyNy45MTMsNi4zNTUsMjksMTAuMDYyLDI5YzEyLjA3MiwwLDE4LjY3NS0xMC4wMDEsMTguNjc1LTE4LjY3NWMwLTAuMjg0LTAuMDA4LTAuNTY4LTAuMDItMC44NSAgQzMwLDguNTUsMzEuMTEyLDcuMzk1LDMxLjk5Myw2LjA3N3oiIGZpbGw9IiNmZmZmZmYiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=)
+			.btn
+				display: block
+				height: 38px 
+				line-height: 38px
+				font-size: 19px 
+				width: 100% 
+			input[type=text],input[type=password]
+				height: 40px
+				line-height: normal 
+				background-color: #f7f7f7
+				border: 1px solid #ababab
+				margin-bottom: 16px 
+				display: block
+				width: 100%
+				font-size: 14px 
+				color: #767676 
+				padding: 0 10px 
+				font-family: Comfortaa,sans-serif
+				+box 
+			span
+				display: block
+				height: 35px 
+				line-height: 35px
+				text-align: center
+				font-size: 14px  
+				font-weight: bold
+				color: #837776  
+			label
+				text-align: left
+				font-size: 14px 
+				margin-bottom: 8px  
+				display: block
+				margin-top: -10px 
+				color: #767676 
+				input
+					vertical-align: middle
+					margin-right: 10px 
+					position: relative
+					top: -1px 
+			.login__forgot
+				text-align: right
+				font-size: 14px 
+				padding-top: 5px 
+				color: #767676 
+				a
+					text-decoration: none
+					color: #767676 
+
+		// a
+		// 	display: inline-block
+		// 	vertical-align: top	
+		// 	text-decoration: none
+		// .login-link
+		// 	margin-bottom: 5px	
+		// 	margin-left: 10px	
+		// 	margin-right: 20px
+		// .btn
+		// 	height: 24px
+		// 	padding: 7px 10px
+		// 	font:
+		// 		size: 15px
+		// 		weight: 700
+		// 	line-height: 10px
+		// .fb-btn
+		// 	position: relative
+		// 	margin-right: 15px
+		// 	padding-left: 20px			
+		// 	+g(#8ca3c9, #445e8f)
+		// 	i
+		// 		position: absolute
+		// 		top: 4px
+		// 		left: 7px
+		// 		+s(f-btn)
+		// 	&:hover
+		// 		opacity: .8
+		// .tw-btn
+		// 	position: relative		
+		// 	padding-left: 30px			
+		// 	+g(#6fd1fe, #2598cf)
+		// 	i
+		// 		position: absolute
+		// 		top: 4px
+		// 		left: 7px			
+		// 		+s(tw-btn)
+		// 	&:hover
+		// 		opacity: .8
+		// .login-link:nth-child(2),
+		// 	margin: 0
 		.is-small &
 			top: 0
+			margin-top: 8px 
 			.login-link
 				margin-bottom: 2px
+		
 
 	.header__user
 		display: none

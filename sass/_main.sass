@@ -35,7 +35,7 @@
 			&:last-child
 				margin-right: 0
 			.item__picture
-				height: 470px
+				height: 520px
 			.item__check
 				&:before
 					bottom: 148px
@@ -138,6 +138,9 @@
 		top: 10px 
 		line-height: 1 
 		z-index: 5 
+		display: none
+		.is-votedone &
+			display: block
 	.item__trash
 		position: absolute
 		left: 0
@@ -176,6 +179,9 @@
 		&.is-green
 			background: #44FFFE 
 	.item__percentageline-wrap
+		display: none
+		.is-votedone &
+			display: block
 		.popup-preview &
 			height: calc(100% - 40px)
 			bottom: 0
@@ -594,6 +600,7 @@
 		margin-left: -39px  
 		right: auto
 		bottom: auto
+		transition: transform .2s linear
 		.is-small &
 			transform: scale(.6)
 			top: -13px 
