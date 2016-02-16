@@ -1,0 +1,74 @@
+.page-message
+  position: fixed
+  width: 560px
+  top: 0
+  left: 50%
+  margin-left: -280px
+  z-index: 1003
+  opacity: 0.95
+
+.page-message-icon-wrapper
+  width: 40px
+  height: 40px
+  border-radius: 20px
+  background: #49ac60
+
+.page-message-icon-wrapper b
+  margin: 8px 0 0 4px
+
+.checkmark_small
+  background: transparent url(../images/icons.png) -131px -86px no-repeat
+  display: block
+  width: 32px
+  height: 25px
+
+.alert_mark_icon
+  background: transparent url(../images/icons.png) -236px -86px no-repeat
+  display: none
+  width: 58px
+  height: 50px
+
+.warning
+  & .page-message-icon
+    padding: 8px
+
+  &.page-message-wrapper
+    background: orange
+
+  & .checkmark_small
+    display: none
+
+  & .alert_mark_icon
+    display: inline-block
+
+  & .page-message-icon-wrapper
+    width: 58px
+    height: 50px
+    background: orange
+    border-radius: 0
+
+  & .page-message-icon-wrapper b
+    margin: 0
+
+.page-message-content
+  display: table
+
+.page-message-wrapper
+  display: none
+  padding: 20px
+  font-size: 1.6em
+  color: white
+  background-color: #49ac60
+
+.page-message-icon, .page-message-text
+  vertical-align: middle
+
+.page-message-icon
+  float: left
+
+.page-message-text
+  margin-left: 80px
+  padding-left: 20px
+  display: table-cell
+  vertical-align: middle
+  font-family: comfortaalight, Arial, Verdana, sans-serif
