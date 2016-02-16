@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.page-message { position: fixed; width: 560px; top: 0; left: 50%; margin-left: -280px; z-index: 1003; opacity: 0.9; }
+.page-message { position: fixed; width: 560px; top: 0; left: 50%; margin-left: -280px; z-index: 1003; opacity: 0.95; }
 
 .page-message-icon-wrapper { width: 40px; height: 40px; border-radius: 20px; background: #49ac60; }
 
@@ -1896,8 +1896,8 @@ body { padding-top: 70px; padding-bottom: 150px; }
   to { height: 100%; } }
 @keyframes item__check { from { height: 0; }
   to { height: 100%; } }
-.item.is-runcheckmark .item__check { opacity: 1; z-index: 10; height: 0; -moz-animation: item__check 3s linear forwards; -webkit-animation: item__check 3s linear forwards; animation: item__check 3s linear forwards; }
-.item.is-runcheckmark .item__picture:after { opacity: 1; }
+.item.is-runcheckmark .item__check { display: block; z-index: 10; height: 0; -moz-animation: item__check 3s linear forwards; -webkit-animation: item__check 3s linear forwards; animation: item__check 3s linear forwards; }
+.item.is-runcheckmark .item__picture:after { display: block; }
 .item.is-winner .item__percentageline { background: #44FFFE; }
 .item .item__text { position: absolute; bottom: 0; left: 0; right: 0; background: #fff; height: 71px; font-size: 15px; color: #535353; padding: 6px 13px 0 13px; overflow: hidden; }
 .item.item_finished .item__buy { position: absolute; bottom: 5px; left: 0; right: 0; text-align: center; display: none; }
@@ -1909,10 +1909,13 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .item.item_add { height: 346px; box-shadow: none; box-sizing: border-box; border: 2px dashed #B7B7B7; background: transparent; }
 .item.item_add .item__addicon { border-radius: 50%; font-size: 30px; color: #A4A4A4; text-align: center; width: 132px; height: 132px; border: 3px dashed #B7B7B7; position: absolute; top: 50%; left: 50%; margin-left: -66px; margin-top: -66px; line-height: 1.1; box-sizing: border-box; padding-top: 30px; cursor: pointer; }
 
-.item__picture:after { content: ""; transition: all 0.3s linear; position: absolute; top: 50%; left: 50%; width: 180px; height: 174px; margin-top: -87px; margin-left: -90px; background: url(../img/check-is-hover.png) no-repeat 50% 50%; opacity: 0; transition: all 0.2s linear; }
+.item__picture:after { content: ""; transition: all 0.3s linear; position: absolute; top: 50%; left: 50%; width: 180px; height: 174px; margin-top: -87px; margin-left: -90px; background: url(../img/check-is-hover.png) no-repeat 50% 50%; display: none; transition: all 0.2s linear; }
 .create .item__picture:after { display: none; }
 
 .create .item__check { display: none; }
+
+.create .item .item__picture:after { display: none; }
+.create .item:hover .item__picture:after { display: none; }
 
 .create .item .item__addtext { font-size: 15px; }
 .create .item.item_addtext .item__addicon { display: none; }
@@ -1920,11 +1923,11 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .create .item.item_add .item__addicon { display: block; }
 .create .item.item_add .item__addtext { display: none; }
 
-.item:hover .item__picture:after, .invited .item .item__picture:after { opacity: 1; }
+.item:hover .item__picture:after, .invited .item:hover .item__picture:after { display: block; }
 
-.is-finished .item:hover .item__picture:after { opacity: 0; }
+.is-finished .item:hover .item__picture:after { display: none; }
 
-.is-finished .item.is-runcheckmark:hover .item__picture:after { opacity: 1; }
+.is-finished .item.is-runcheckmark:hover .item__picture:after { display: block; }
 
 .pick_finished .item__picture:after { display: none; }
 .pick_finished .item__picture * { display: none; }
@@ -1989,7 +1992,7 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .pick .pick__socials .pick__socials-list .social-ml { left: -80px; background: url('../img/icons-s46cbc92f32.png') 0 -833px no-repeat; width: 34px; height: 34px; }
 .pick .pick__socials .pick__socials-list .social-ch { left: -40px; background: url('../img/icons-s46cbc92f32.png') 0 -701px no-repeat; width: 34px; height: 34px; }
 .pick .pick__socials .is-runsociallist { -moz-transform: translateX(8%); -ms-transform: translateX(8%); -webkit-transform: translateX(8%); transform: translateX(8%); }
-.pick .pick__socials .item__picture:after { opacity: 1; }
+.pick .pick__socials .item__picture:after { display: block; }
 .pick .pick__fave { float: left; position: relative; cursor: pointer; }
 .pick .pick__fave.icon-512 { font-size: 35px; color: #bfbfbf; }
 .pick .pick__fave.pick__fave_liked { color: #00d0c8; }

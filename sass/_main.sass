@@ -209,12 +209,12 @@
 			to
 				height: 100%
 		.item__check
-			opacity: 1
+			display: block
 			z-index: 10	
 			height: 0	
 			+animation(item__check 3s linear forwards) 
 		.item__picture:after
-			opacity: 1	
+			display: block	
 	&.is-winner
 		.item__percentageline
 			background: #44FFFE
@@ -299,13 +299,20 @@
 	margin-top: -87px
 	margin-left: -90px
 	background: url(../img/check-is-hover.png) no-repeat 50% 50%
-	opacity: 0
+	display: none
 	transition: all .2s linear
 	// .invited &
 	.create &
 		display: none 
 .create .item__check
 	display: none
+.create
+	.item
+		.item__picture:after
+			display: none
+	.item:hover
+		.item__picture:after
+			display: none
 .create
 	.item
 		.item__addtext
@@ -321,15 +328,15 @@
 			.item__addtext
 				display: none
 
-.item:hover,.invited .item 
+.item:hover,.invited .item:hover 
 	.item__picture:after
-		opacity: 1
+		display: block
 .is-finished .item:hover
 	.item__picture:after
-		opacity: 0 
+		display: none 
 .is-finished .item.is-runcheckmark:hover
 	.item__picture:after
-		opacity: 1
+		display: block
 .pick_finished .item__picture 
 	&:after
 		display: none
@@ -570,7 +577,7 @@
 		.is-runsociallist
 			+translateX(8%)
 		.item__picture:after
-			opacity: 1
+			display: block
 	.pick__fave
 		float: left
 		position: relative
