@@ -195,8 +195,13 @@
 		&.is-green
 			background: #44FFFE 
 	&.is-voted
-		.item__check
-			height: 100%
+		&:before
+			position: absolute
+			right: 10px
+			top: 10px
+			content: ' '
+			+s(choicemade)
+			z-index: 200
 	&.is-runcheckmark
 		+keyframes(item__check)
 			from
@@ -211,13 +216,8 @@
 		.item__picture:after
 			opacity: 1	
 	&.is-winner
-		&:before
-			position: absolute
-			right: 10px
-			top: 10px
-			content: ' '
-			+s(choicemade)
-			z-index: 200
+		.item__percentageline
+			background: #44FFFE
 	.item__text
 		position: absolute
 		bottom: 0
@@ -306,6 +306,21 @@
 		display: none 
 .create .item__check
 	display: none
+.create
+	.item
+		.item__addtext
+			font-size: 15px
+		&.item_addtext
+			.item__addicon
+				display: none
+			.item__addtext
+				display: inline-block
+		&.item_add
+			.item__addicon
+				display: block
+			.item__addtext
+				display: none
+
 .item:hover,.invited .item 
 	.item__picture:after
 		opacity: 1
@@ -334,13 +349,14 @@
 	&:hover
 		background: #67ECE6
 .popup
-	position: absolute
-	top: 88%
+	position: fixed
+	top: 0
 	width: 100%
-	padding-top: 150px
-	padding-bottom: 150px
+	height: 100%
+	padding-top: 30px
+	padding-bottom: 30px
 	background: rgba(#000,.4)
-	z-index: 300
+	z-index: 3000
 	&__in
 		@extend %in
 		position: relative
@@ -394,7 +410,14 @@
 			bottom: 0
 		&__picture
 			height: 502px
-		&.is-winner
+			width: 450px
+			line-height: 502px
+			text-align: center
+			img
+				max-height: 100%
+				max-width: 100%
+				vertical-align: middle
+		&.is-voted
 			&:before
 				position: absolute
 				right: -10px
@@ -402,6 +425,9 @@
 				content: ' '
 				+s(choicemade-s)
 				z-index: 10
+		&.is-winner
+			&__percentageline
+				background: #44FFFE
 	&__pictures
 		text-align: center
 		font-size: 0
@@ -544,7 +570,7 @@
 		.is-runsociallist
 			+translateX(8%)
 		.item__picture:after
-			opacity: 1	
+			opacity: 1
 	.pick__fave
 		float: left
 		position: relative
@@ -552,12 +578,8 @@
 		&.icon-512
 			font-size: 35px
 			color: #bfbfbf		
-			&:hover
-				color: #00d0c8	
 		&.pick__fave_liked
 			color: #00d0c8	
-			&.icon-512:hover
-				color: #bfbfbf		
 .votes
 	position: relative
 	text-align: center
