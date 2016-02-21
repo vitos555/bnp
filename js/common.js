@@ -10,7 +10,7 @@ head.ready(function() {
 		return false;
 	});
 	$('.item').click(function(event) {
-		$(this).toggleClass('is-voted');
+		// $(this).toggleClass('is-voted');
 	});
 	
 	$('.pick__fave').click(function(event) {
@@ -30,8 +30,8 @@ head.ready(function() {
 	    		.removeClass('is-runcheckmark');
 	        $(this).toggleClass('is-runcheckmark').on( 'webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function(){
 			    // callback goes here
-			    $(this).parents('.pick').addClass('is-votedone');
-			    $(this).parents('.pick').addClass('is-finished');
+			    // $(this).parents('.pick').addClass('is-votedone');
+			    // $(this).parents('.pick').addClass('is-finished');
 			    alert('animation finished');
 			});
         }
