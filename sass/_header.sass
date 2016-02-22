@@ -38,7 +38,14 @@ body
 		font-size: 0
 		+transition(all .2s linear)
 		text-align: right
-		 
+
+		.is-small &
+			top: 0
+			margin-top: 8px 
+			.login-link
+				margin-bottom: 2px
+		
+	.header__login-links, .header__user 
 		.header__signup
 			color: #767676 
 			font-size: 22px 
@@ -49,8 +56,9 @@ body
 			font-size: 22px 
 			text-decoration: none
 		.header__logindrop
-			position: absolute
 			width: 250px
+			padding: 15px 30px 
+			position: absolute
 			border: 1px solid #a4a4a4 
 			background: #fff 
 			text-align: center
@@ -58,7 +66,6 @@ body
 			right: 0 
 			z-index: 20 
 			box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.21)
-			padding: 15px 30px 
 			font-size: 20px  
 			display: none
 			&.is-open
@@ -146,9 +153,18 @@ body
 					margin-right: 10px 
 					position: relative
 					top: -1px 
-			.login__forgot
+			.login__forgot, .login__signup
 				text-align: right
 				font-size: 14px 
+				padding-top: 5px 
+				color: #767676 
+				a
+					text-decoration: none
+					color: #767676 
+
+			.header__usermenu li
+				text-align: left
+				font-size: 18px 
 				padding-top: 5px 
 				color: #767676 
 				a
@@ -195,17 +211,12 @@ body
 		// 		opacity: .8
 		// .login-link:nth-child(2),
 		// 	margin: 0
-		.is-small &
-			top: 0
-			margin-top: 8px 
-			.login-link
-				margin-bottom: 2px
 		
 
 	.header__user
 		display: none
 		position: absolute
-		top: 17px
+		top: 11px
 		right: 0
 		+transition(all .2s linear)
 		.is-small &
@@ -213,6 +224,7 @@ body
 		.header__av
 			width: 55px
 			height: 55px
+			background-size: 55px 55px
 			border-radius: 50%
 			display: inline-block
 			background-position: 50% 50%
@@ -220,6 +232,15 @@ body
 			.is-small &
 				width: 30px
 				height: 30px
+				background-size: 30px 30px
+		.header__logindrop
+			width: 220px
+			padding: 15px 20px
+			top: 51px
+			right: -9px
+			.is-small &
+				top: 40px
+				right: -21px 
 	.header__search
 		position: absolute
 		top: 12px

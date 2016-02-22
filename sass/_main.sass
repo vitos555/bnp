@@ -4,6 +4,13 @@
 	padding-top: 20px
 	&__in
 		@extend %in
+	.feed__title
+		text-align: center
+		font-size: 35px
+		color: #767676
+		width: 100%
+		padding-top: 10px
+		padding-bottom: 10px
 .is-drop
 	padding-top: 70px
 .items
@@ -38,7 +45,7 @@
 				height: 520px
 			.item__check
 				&:before
-					bottom: 148px
+					bottom: 173px
 
 	&.items_4
 		.item
@@ -113,7 +120,7 @@
 		// background: url(../img/check11.png) no-repeat 50% 55%
 		overflow: hidden
 		transition: all .3s linear
-		opacity: 0
+		display: none
 		// -webkit-background-size: contain
 		// -o-background-size: contain
 		// background-size: contain
@@ -331,7 +338,14 @@
 .item:hover,.invited .item:hover 
 	.item__picture:after
 		display: block
-.is-finished .item:hover
+.item__buy
+	display: none
+.is-finished 
+	.item__check
+		display: none 
+	.item__buy
+		display: block
+.is-finished .item, .is-finished .item:hover
 	.item__picture:after
 		display: none 
 .is-finished .item.is-runcheckmark:hover
