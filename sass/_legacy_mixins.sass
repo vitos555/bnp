@@ -1,0 +1,37 @@
+$break-large: 1400px
+$steplast: 420px
+$step4: 600px
+$step3: 700px
+$step5: 800px
+$step2: 900px
+$step1: 1200px
+
+=r($media)
+  @if $media == step1
+    // narrower than $width
+    @media only screen and (max-width: $step1)
+      @content
+  @else if $media == step2
+    // wider than $width
+    @media only screen and (max-width: $step2)
+      @content
+  @else if $media == step3
+    // wider than $width
+    @media only screen and (max-width: $step3)
+      @content
+  @else if $media == step4
+    // wider than $width
+    @media only screen and (max-width: $step4)
+      @content
+  @else if $media == step5
+    // wider than $width
+    @media only screen and (max-width: $step5)
+      @content
+  @else if $media == steplast
+    // wider than $width
+    @media only screen and (max-width: $steplast)
+      @content
+  @else if $media == wide
+    // wider than $width
+    @media only screen and (min-width: $break-large)
+      @content
