@@ -2060,3 +2060,9 @@ body { padding-top: 70px; padding-bottom: 150px; }
 .howitworks .howitworks__how2 i { background: url('../img/icons-s01800aa9e7.png') 0 -787px no-repeat; width: 69px; height: 68px; display: inline-block; }
 .howitworks .howitworks__how3 i { background: url('../img/icons-s01800aa9e7.png') 0 -865px no-repeat; width: 68px; height: 68px; display: inline-block; }
 .howitworks .howitworks__how4 i { background: url('../img/icons-s01800aa9e7.png') 0 -943px no-repeat; width: 64px; height: 65px; display: inline-block; }
+
+@keyframes loader { 0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; } }
+.loader { height: 333px; width: auto; margin: 50px 0; position: relative; }
+.loader:before { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/loader.png) no-repeat 0 0; z-index: 10; content: ""; }
+.loader:after { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: red; z-index: 5; content: ""; animation: loader 2s linear infinite; animation-fill-mode: both; background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%); background-size: 1000px 100%; }
