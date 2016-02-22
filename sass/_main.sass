@@ -715,7 +715,7 @@
 		padding: 0 26px
 		font-size: 20px
 		line-height: 20px
-.explaine
+.explain
 	position: relative
 	height: 45px
 	margin-bottom: 77px
@@ -837,3 +837,36 @@
 	border-top: 2px solid #b9b9b9
 	border-right: 2px solid #b9b9b9
 
+.howitworks
+	overflow: hidden
+	margin-bottom: 50px 
+	&__title
+		text-align: center
+		font-size: 50px 
+		color: #767676 
+		font-weight: normal
+		margin-bottom: 20px 
+	&__item
+		float: left
+		width: 23%
+		margin-right: 2.66%
+		background: #fff 
+		border: 1px solid #aeaeae
+		padding: 35px 5px 30px 5px 
+		text-align: center
+		&:last-child
+			margin-right: 0
+		h3
+			font-weight: bold
+			font-size: 46px 
+			color: #767676 
+			margin-bottom: 35px 
+		p
+			font-size: 14px
+			color: #535353 
+	&__icon
+		min-height: 105px 
+	@each $s in how1,how2,how3,how4
+		.howitworks__#{$s} i
+			+s(#{$s})
+			display: inline-block
