@@ -90,7 +90,8 @@
 		line-height: 50px 
 		i
 			position: relative
-			top: 4px 
+			top: 4px
+			display: inline-block
 	&:hover
 		.item__zoom
 			display: block
@@ -179,7 +180,7 @@
 	.item__percentageline-wrap
 		height: calc(100% - 120px)
 		position: absolute
-		bottom: 65px 
+		bottom: 69px 
 		left: 0
 		width: 15px  
 		z-index: 200 
@@ -219,7 +220,7 @@
 			display: block
 			z-index: 10	
 			height: 0	
-			+animation(item__check 3s linear forwards) 
+			+animation(item__check 2s linear forwards) 
 		.item__picture:after
 			display: block	
 	&.is-winner
@@ -231,11 +232,12 @@
 		left: 0
 		right: 0
 		background: #fff
-		height: 71px
-		font-size: 15px
+		height: 66px
+		font-size: 14px
 		color: #535353
 		padding: 6px 13px 0 13px
 		overflow: hidden
+		text-overflow: ellipsis
 	&.item_finished
 		.item__buy
 			position: absolute
@@ -277,6 +279,7 @@
 		box-shadow: none
 		box-sizing: border-box
 		border: 2px dashed #B7B7B7
+		cursor: pointer
 		background: transparent
 		.item__addicon
 			border-radius: 50%
@@ -294,7 +297,6 @@
 			line-height: 1.1
 			box-sizing: border-box
 			padding-top: 30px
-			cursor: pointer
 .item__picture:after
 	content: ""
 	transition: all .3s linear
@@ -431,7 +433,7 @@
 			bottom: 0
 		&__picture
 			height: 502px
-			width: 450px
+			width: 100%
 			line-height: 502px
 			text-align: center
 			img
@@ -529,11 +531,13 @@
 				text-decoration: underline
 	.icon-494
 		position: absolute
-		top: 1px
-		right: 4px
+		top: -1px
+		right: 0
 		// width: 34px
-		// height: 34px
+		width: 39px
 		font-size: 29px
+		line-height: 35px
+		height: 39px
 		transform: rotate(90deg)
 		color: #bfbfbf
 		text-align: center
@@ -543,7 +547,7 @@
 		transition: all .6s linear
 		cursor: pointer
 		&.is-white-bg
-			background: #fff
+			background: #F7F7F7
 	.pick__socials
 		float: right
 		position: relative
@@ -590,7 +594,7 @@
 				left: -40px			
 				+s(m-chain)		
 		.is-runsociallist
-			+translateX(8%)
+			+translateX(3%)
 		.item__picture:after
 			display: block
 	.pick__fave
